@@ -36,7 +36,7 @@ namespace GameTest
         {
             MapGeneration x = new MapGeneration();
             x.CreateMap();
-            Tile y = x.dict[new Point(8,7)];
+            //Tile y = x.dict[new Point(8,7)];
         }
     }
 }

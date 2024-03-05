@@ -1,11 +1,10 @@
 ﻿using GameTest;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace GameTest
 {
@@ -17,14 +16,15 @@ namespace GameTest
             {
 
             }
-        public void CreateMap()
+        private string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        private string dirNamespace = "GameTest";
+        public Map CreateMap()
         {
-            String jsonString = new StreamReader("map.json").ReadToEnd();
-            var jsonFile = map.FromJson(jsonString);
+            if (!Directory.Exists(Path.Combine(directory, dirNamespace))) Directory.CreateDirectory(Path.Combine(directory, dirNamespace));
+            String jsonString = new StreamReader(Path.Combine(directory, dirNamespace, "map.json")).ReadToEnd();
+            var jsonFile = Map.FromJson(jsonString);
 
-            string FileName = jsonFile.File;
-            long Lvl = jsonFile.Level;
-            bool isTrue = jsonFile.CSharp;
+            return jsonFile;
         }
     }
 }
