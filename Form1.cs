@@ -24,10 +24,7 @@ namespace GameTest
 
         private void lblQuit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to quit?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
                 Application.Exit();
-            }
         }
 
         private void lblSettings_Click(object sender, EventArgs e)
@@ -37,7 +34,7 @@ namespace GameTest
 
         private void lblStart_Click(object sender, EventArgs e)
         {
-            Map x = new Map();
+            MapGeneration x = new MapGeneration();
             x.CreateMap();
             Tile y = x.dict[new Point(8,7)];
         }
