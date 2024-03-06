@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GameTest
 {
@@ -17,11 +18,15 @@ namespace GameTest
         public GameForm()
         {
             InitializeComponent();
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void lblQuit_Click(object sender, EventArgs e)
@@ -54,15 +59,13 @@ namespace GameTest
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
             StartPanel.Visible = false;
-            lblStart.Visible = false;
         }
-
         private void StartPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void GameForm_KeyDown(object sender, KeyEventArgs e)
+        private void GameForm_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
