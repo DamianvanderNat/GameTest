@@ -16,15 +16,15 @@ namespace GameTest
             {
 
             }
-        private string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        private string dirNamespace = "GameTest";
-        public Map CreateMap()
-        {
-            if (!Directory.Exists(Path.Combine(directory, dirNamespace))) Directory.CreateDirectory(Path.Combine(directory, dirNamespace));
-            String jsonString = new StreamReader(Path.Combine(directory, dirNamespace, "map.json")).ReadToEnd();
-            var jsonFile = Map.FromJson(jsonString);
 
-            return jsonFile;
+        public void Voorbeeldje()
+        {
+            //voorbeeld 
+            Point x = new Point(0, 0); Tile f1 = new Tile() { tileType = 2 };
+            Point x2 = new Point(1, 0); Tile f2 = new Tile() { tileType = 3 };
+            dict.Add(x, f1);
+            dict.Add(x2, f2);
+        
         }
     }
 }

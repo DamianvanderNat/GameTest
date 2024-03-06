@@ -15,44 +15,4 @@ namespace GameTest
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class ReadMapFile
-    {
-        [JsonProperty("map")]
-        public MapElement[] MapMap { get; set; }
-    }
-
-    public partial class MapElement
-    {
-        [JsonProperty("x")]
-        public long X { get; set; }
-
-        [JsonProperty("y")]
-        public long Y { get; set; }
-
-        [JsonProperty("type")]
-        public long Type { get; set; }
-    }
-
-    public partial class Map
-    {
-        public static Map FromJson(string json) => JsonConvert.DeserializeObject<Map>(json, GameTest.Converter.Settings);
-    }
-
-    public static class Serialize
-    {
-        public static string ToJson(this Map self) => JsonConvert.SerializeObject(self, GameTest.Converter.Settings);
-    }
-
-    internal static class Converter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
-    }
 }

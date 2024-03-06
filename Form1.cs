@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +26,7 @@ namespace GameTest
 
         private void lblQuit_Click(object sender, EventArgs e)
         {
-                Application.Exit();
+            Application.Exit();
         }
 
         private void lblSettings_Click(object sender, EventArgs e)
@@ -32,11 +34,26 @@ namespace GameTest
             //hier komt de settings scherm achter
         }
 
+
+        private string ReadJsonMapFromFile(string filename)
+        {
+
+            string path = Directory.GetCurrentDirectory() + "\\" + filename;
+            string json = "";
+            // This text is added only once to the file.
+            if (File.Exists(path))
+            {
+                // Create a file to write to.
+               json = File.ReadAllText(path);
+            }
+            return json;
+        }
         private void lblStart_Click(object sender, EventArgs e)
         {
-            MapGeneration x = new MapGeneration();
-            x.CreateMap();
-            //Tile y = x.dict[new Point(8,7)];
+
+            string json = ReadJsonMapFromFile("mapvb.json");
+            MapGeneration y = JsonConvert.
+                DeserializeObject<MapGeneration>(json);
         }
     }
 }
