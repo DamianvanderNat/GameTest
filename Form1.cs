@@ -59,13 +59,14 @@ namespace GameTest
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
             StartPanel.Visible = false;
+            lblStart.Visible = false;
         }
         private void StartPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void GameForm_KeyDown_1(object sender, KeyEventArgs e)
+        private void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
