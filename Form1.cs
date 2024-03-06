@@ -21,7 +21,7 @@ namespace GameTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblQuit_Click(object sender, EventArgs e)
@@ -44,16 +44,30 @@ namespace GameTest
             if (File.Exists(path))
             {
                 // Create a file to write to.
-               json = File.ReadAllText(path);
+                json = File.ReadAllText(path);
             }
             return json;
         }
         private void lblStart_Click(object sender, EventArgs e)
         {
-
             string json = ReadJsonMapFromFile("mapvb.json");
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
+            StartPanel.Visible = false;
+            lblStart.Visible = false;
+        }
+
+        private void StartPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GameForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                StartPanel.Visible = true;
+            }
         }
     }
 }
