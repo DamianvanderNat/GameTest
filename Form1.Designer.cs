@@ -33,9 +33,11 @@
             lblQuit = new System.Windows.Forms.Label();
             tabControl1 = new System.Windows.Forms.TabControl();
             MenuTab1 = new System.Windows.Forms.TabPage();
+            label1 = new System.Windows.Forms.Label();
             Game1 = new System.Windows.Forms.TabPage();
             InputBox1 = new System.Windows.Forms.TextBox();
             Map1 = new System.Windows.Forms.TabPage();
+            panel1 = new System.Windows.Forms.Panel();
             tabControl1.SuspendLayout();
             MenuTab1.SuspendLayout();
             Game1.SuspendLayout();
@@ -86,7 +88,7 @@
             tabControl1.Controls.Add(Game1);
             tabControl1.Controls.Add(Map1);
             tabControl1.Location = new System.Drawing.Point(-24, -52);
-            tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            tabControl1.Margin = new System.Windows.Forms.Padding(4);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -96,25 +98,37 @@
             // MenuTab1
             // 
             MenuTab1.BackColor = System.Drawing.Color.Black;
+            MenuTab1.Controls.Add(panel1);
+            MenuTab1.Controls.Add(label1);
             MenuTab1.Controls.Add(lblQuit);
             MenuTab1.Controls.Add(lblStart);
             MenuTab1.Controls.Add(lblSettings);
             MenuTab1.Location = new System.Drawing.Point(4, 34);
-            MenuTab1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            MenuTab1.Margin = new System.Windows.Forms.Padding(4);
             MenuTab1.Name = "MenuTab1";
-            MenuTab1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            MenuTab1.Padding = new System.Windows.Forms.Padding(4);
             MenuTab1.Size = new System.Drawing.Size(822, 612);
             MenuTab1.TabIndex = 0;
             MenuTab1.Text = "tabPage1";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = System.Drawing.SystemColors.Control;
+            label1.Location = new System.Drawing.Point(320, 98);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(59, 25);
+            label1.TabIndex = 3;
+            label1.Text = "label1";
             // 
             // Game1
             // 
             Game1.BackColor = System.Drawing.Color.Black;
             Game1.Controls.Add(InputBox1);
             Game1.Location = new System.Drawing.Point(4, 34);
-            Game1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Game1.Margin = new System.Windows.Forms.Padding(4);
             Game1.Name = "Game1";
-            Game1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Game1.Padding = new System.Windows.Forms.Padding(4);
             Game1.Size = new System.Drawing.Size(822, 612);
             Game1.TabIndex = 1;
             Game1.Text = "tabPage2";
@@ -122,7 +136,7 @@
             // InputBox1
             // 
             InputBox1.Location = new System.Drawing.Point(34, 461);
-            InputBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            InputBox1.Margin = new System.Windows.Forms.Padding(4);
             InputBox1.Name = "InputBox1";
             InputBox1.Size = new System.Drawing.Size(760, 31);
             InputBox1.TabIndex = 0;
@@ -132,12 +146,20 @@
             // 
             Map1.BackColor = System.Drawing.Color.Black;
             Map1.Location = new System.Drawing.Point(4, 34);
-            Map1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Map1.Margin = new System.Windows.Forms.Padding(4);
             Map1.Name = "Map1";
-            Map1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Map1.Padding = new System.Windows.Forms.Padding(4);
             Map1.Size = new System.Drawing.Size(822, 612);
             Map1.TabIndex = 2;
             Map1.Text = "tabPage3";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = System.Drawing.Color.DarkGray;
+            panel1.Location = new System.Drawing.Point(312, 184);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(300, 150);
+            panel1.TabIndex = 4;
             // 
             // GameForm
             // 
@@ -170,6 +192,8 @@
         private System.Windows.Forms.TabPage Game1;
         private System.Windows.Forms.TabPage Map1;
         private System.Windows.Forms.TextBox InputBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

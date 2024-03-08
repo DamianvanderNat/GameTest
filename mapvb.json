@@ -3,22 +3,22 @@
     "0, 0": {
       "tileType": 2,
       "Welcome": null,
-      "imageFilename": null
+
     },
     "1, 0": {
       "tileType": 3,
       "Welcome": null,
-      "imageFilename": null
+
     },
     "1, 1": {
       "tileType": 7,
       "Welcome": "Welkom in het bos",
-      "imageFilename": "wood.jpg"
+
     },
     "1, 2": {
       "tileType": 8,
       "Welcome": "Welkom op hert atrand",
-      "imageFilename": "strand.jpg"
+
     }
   }
 }

@@ -59,8 +59,9 @@ namespace GameTest
             string json = ReadJsonMapFromFile("mapvb.json");
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
-            tabControl1.SelectedTab = Game1;
 
+            label1.Text = y.GenerateTextFromMap();
+            panel1.Controls.AddRange(y.GeneratImageFromMap().ToArray());
         }
         private void StartPanel_Paint(object sender, PaintEventArgs e)
         {
