@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -58,8 +59,8 @@ namespace GameTest
             string json = ReadJsonMapFromFile("mapvb.json");
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
-            StartPanel.Visible = false;
-            lblStart.Visible = false;
+            tabControl1.SelectedTab = Game1;
+
         }
         private void StartPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -68,10 +69,25 @@ namespace GameTest
 
         private void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-            {
-                StartPanel.Visible = true;
+
+        }
+
+        private void InputBox1_TextChanged(object sender, EventArgs e)
+        {
+             if (InputBox1.Text == "stop")
+             {
+                // tabControl1.SelectedTab = MenuTab1;
+                Application.Exit();
             }
         }
+
+        private void InputBox1_Enter(object sender, EventArgs e)
+        {
+           if (InputBox1.Text == "stop")
+            {
+                Application.Exit ();
+            }
+        }
+
     }
 }
