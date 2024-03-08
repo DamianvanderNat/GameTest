@@ -72,22 +72,16 @@ namespace GameTest
 
         }
 
-        private void InputBox1_TextChanged(object sender, EventArgs e)
-        {
-             if (InputBox1.Text == "stop")
-             {
-                // tabControl1.SelectedTab = MenuTab1;
-                Application.Exit();
-            }
-        }
 
-        private void InputBox1_Enter(object sender, EventArgs e)
+        private void InputBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-           if (InputBox1.Text == "stop")
+            if (InputBox1.Text == "stop" || InputBox1.Text == "Stop")
             {
-                Application.Exit ();
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    Application.Exit();
+                }
             }
         }
-
     }
 }
