@@ -76,7 +76,7 @@ namespace GameTest
                     margin.Bottom = 0;
                     margin.Top = 0;
                     pb.Margin = margin;
-                    pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
+                    pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".png");
                     map += value.tileType;
                     p.Controls.Add(pb);
                 }
@@ -92,7 +92,7 @@ namespace GameTest
                     margin.Top = 0;
                     pb.Margin = margin;
                     map += value.tileType;
-                   pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
+                   pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".png");
                     p.Controls.Add(pb);
                     currentRow++;
                 }
