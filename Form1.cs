@@ -60,8 +60,10 @@ namespace GameTest
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
 
-            label1.Text = y.GenerateTextFromMap();
-            panel1.Controls.AddRange(y.GeneratImageFromMap().ToArray());
+            //label1.Text = y.GenerateTextFromMap();
+            //flowLayoutPanel1.Controls.AddRange(y.GenerateImageFromMap().ToArray());
+            y.GenerateImageFromMap(flowLayoutPanel1);
+            tabControl1.SelectedTab = Game1;
         }
         private void StartPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -76,13 +78,25 @@ namespace GameTest
 
         private void InputBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (InputBox1.Text == "stop" || InputBox1.Text == "Stop")
+            if (InputBox1.Text == "quit" || InputBox1.Text == "Quit")
             {
                 if (e.KeyChar == (char)Keys.Enter)
                 {
                     Application.Exit();
                 }
             }
+            if (InputBox1.Text == "map" || InputBox1.Text == "Map")
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    tabControl1.SelectedTab = Map1;
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = Game1;
         }
     }
 }

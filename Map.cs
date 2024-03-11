@@ -53,10 +53,11 @@ namespace GameTest
             return map;
         }
 
-        public List<PictureBox> GeneratImageFromMap()
+        public void GenerateImageFromMap(FlowLayoutPanel p)
         {
             string map = "";
             int currentRow = 0;
+            PictureBox pb = null;
             List<PictureBox> row = new List<PictureBox>();
             foreach (var kvp in dict)
             {
@@ -65,23 +66,22 @@ namespace GameTest
                 Tile value = kvp.Value;
                 if (key.Y == currentRow)
                 {
-                    PictureBox pb = new PictureBox();
+                     pb = new PictureBox();
                     pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
                     map += value.tileType;
-                    row.Add(pb);
+                    p.Controls.Add(pb);
                 }
                 else
                 {
-
-                    PictureBox pb = new PictureBox();
+                    p.SetFlowBreak(pb, true);
+                     pb = new PictureBox();
                     map += value.tileType;
-                    pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
-                    map += value.tileType;
-                    row.Add(pb);
+                   pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
+                    p.Controls.Add(pb);
                     currentRow++;
                 }
             }
-            return row;
+            return ;
         }
     }
 }
