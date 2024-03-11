@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 
 namespace GameTest
@@ -58,6 +59,7 @@ namespace GameTest
             string map = "";
             int currentRow = 0;
             PictureBox pb = null;
+            Size size = new Size(20, 20);
             List<PictureBox> row = new List<PictureBox>();
             foreach (var kvp in dict)
             {
@@ -67,6 +69,13 @@ namespace GameTest
                 if (key.Y == currentRow)
                 {
                      pb = new PictureBox();
+                    pb.Size = size;
+                    var margin = pb.Margin;
+                    margin.Left = 0;
+                    margin.Right = 0;
+                    margin.Bottom = 0;
+                    margin.Top = 0;
+                    pb.Margin = margin;
                     pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
                     map += value.tileType;
                     p.Controls.Add(pb);
@@ -75,6 +84,13 @@ namespace GameTest
                 {
                     p.SetFlowBreak(pb, true);
                      pb = new PictureBox();
+                    pb.Size = size;
+                    var margin = pb.Margin;
+                    margin.Left = 0;
+                    margin.Right = 0;
+                    margin.Bottom = 0;
+                    margin.Top = 0;
+                    pb.Margin = margin;
                     map += value.tileType;
                    pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".jpg");
                     p.Controls.Add(pb);

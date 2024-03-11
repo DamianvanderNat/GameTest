@@ -38,12 +38,10 @@
             InputBox1 = new System.Windows.Forms.TextBox();
             Map1 = new System.Windows.Forms.TabPage();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            button1 = new System.Windows.Forms.Button();
             tabControl1.SuspendLayout();
             MenuTab1.SuspendLayout();
             Game1.SuspendLayout();
             Map1.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // lblStart
@@ -163,23 +161,12 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
-            flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new System.Drawing.Size(1012, 620);
             flowLayoutPanel1.TabIndex = 6;
-            // 
-            // button1
-            // 
-            button1.Location = new System.Drawing.Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // GameForm
             // 
@@ -200,7 +187,6 @@
             Game1.ResumeLayout(false);
             Game1.PerformLayout();
             Map1.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -216,7 +202,6 @@
         private System.Windows.Forms.TextBox InputBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
     }
 }
 
