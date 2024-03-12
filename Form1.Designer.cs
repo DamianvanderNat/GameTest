@@ -164,6 +164,7 @@
             flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            flowLayoutPanel1.MinimumSize = new System.Drawing.Size(30, 30);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new System.Drawing.Size(1012, 620);
             flowLayoutPanel1.TabIndex = 6;

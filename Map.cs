@@ -57,18 +57,18 @@ namespace GameTest
         public void GenerateImageFromMap(FlowLayoutPanel p)
         {
             string map = "";
+            int currentColumn = 0;
             int currentRow = 0;
             PictureBox pb = null;
             Size size = new Size(20, 20);
             List<PictureBox> row = new List<PictureBox>();
             foreach (var kvp in dict)
             {
-                currentRow = 0;
                 Point key = kvp.Key;
                 Tile value = kvp.Value;
-                if (key.Y == currentRow)
-                {
-                     pb = new PictureBox();
+                if (key.X == currentRow)
+                { 
+                    pb = new PictureBox();
                     pb.Size = size;
                     var margin = pb.Margin;
                     margin.Left = 0;
@@ -83,7 +83,7 @@ namespace GameTest
                 else
                 {
                     p.SetFlowBreak(pb, true);
-                     pb = new PictureBox();
+                    pb = new PictureBox();
                     pb.Size = size;
                     var margin = pb.Margin;
                     margin.Left = 0;
@@ -92,7 +92,7 @@ namespace GameTest
                     margin.Top = 0;
                     pb.Margin = margin;
                     map += value.tileType;
-                   pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".png");
+                    pb.Image = Image.FromFile("../../../Resources/tile" + value.tileType.ToString() + ".png");
                     p.Controls.Add(pb);
                     currentRow++;
                 }
