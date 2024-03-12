@@ -49,10 +49,10 @@
             lblStart.AutoSize = true;
             lblStart.Font = new System.Drawing.Font("Mistral", 28F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             lblStart.ForeColor = System.Drawing.SystemColors.Control;
-            lblStart.Location = new System.Drawing.Point(44, 28);
+            lblStart.Location = new System.Drawing.Point(35, 22);
             lblStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblStart.Name = "lblStart";
-            lblStart.Size = new System.Drawing.Size(124, 67);
+            lblStart.Size = new System.Drawing.Size(106, 56);
             lblStart.TabIndex = 0;
             lblStart.Text = "Start";
             lblStart.Click += lblStart_Click;
@@ -62,10 +62,10 @@
             lblSettings.AutoSize = true;
             lblSettings.Font = new System.Drawing.Font("Mistral", 28F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             lblSettings.ForeColor = System.Drawing.SystemColors.Control;
-            lblSettings.Location = new System.Drawing.Point(44, 129);
+            lblSettings.Location = new System.Drawing.Point(35, 103);
             lblSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblSettings.Name = "lblSettings";
-            lblSettings.Size = new System.Drawing.Size(176, 67);
+            lblSettings.Size = new System.Drawing.Size(150, 56);
             lblSettings.TabIndex = 1;
             lblSettings.Text = "Settings";
             lblSettings.Click += lblSettings_Click;
@@ -75,10 +75,10 @@
             lblQuit.AutoSize = true;
             lblQuit.Font = new System.Drawing.Font("Mistral", 28F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, 0);
             lblQuit.ForeColor = System.Drawing.SystemColors.Control;
-            lblQuit.Location = new System.Drawing.Point(44, 234);
+            lblQuit.Location = new System.Drawing.Point(35, 187);
             lblQuit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblQuit.Name = "lblQuit";
-            lblQuit.Size = new System.Drawing.Size(116, 67);
+            lblQuit.Size = new System.Drawing.Size(98, 56);
             lblQuit.TabIndex = 2;
             lblQuit.Text = "Quit";
             lblQuit.Click += lblQuit_Click;
@@ -91,11 +91,10 @@
             tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             tabControl1.ItemSize = new System.Drawing.Size(0, 1);
             tabControl1.Location = new System.Drawing.Point(0, 0);
-            tabControl1.Margin = new System.Windows.Forms.Padding(4);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new System.Drawing.Size(1028, 637);
+            tabControl1.Size = new System.Drawing.Size(822, 510);
             tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             tabControl1.TabIndex = 4;
             tabControl1.TabStop = false;
@@ -108,10 +107,9 @@
             MenuTab1.Controls.Add(lblStart);
             MenuTab1.Controls.Add(lblSettings);
             MenuTab1.Location = new System.Drawing.Point(4, 5);
-            MenuTab1.Margin = new System.Windows.Forms.Padding(4);
             MenuTab1.Name = "MenuTab1";
-            MenuTab1.Padding = new System.Windows.Forms.Padding(4);
-            MenuTab1.Size = new System.Drawing.Size(1020, 628);
+            MenuTab1.Padding = new System.Windows.Forms.Padding(3);
+            MenuTab1.Size = new System.Drawing.Size(814, 501);
             MenuTab1.TabIndex = 0;
             MenuTab1.Text = "start menu";
             // 
@@ -119,9 +117,10 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = System.Drawing.SystemColors.Control;
-            label1.Location = new System.Drawing.Point(869, 70);
+            label1.Location = new System.Drawing.Point(695, 56);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(59, 25);
+            label1.Size = new System.Drawing.Size(50, 20);
             label1.TabIndex = 3;
             label1.Text = "label1";
             // 
@@ -130,19 +129,17 @@
             Game1.BackColor = System.Drawing.Color.Black;
             Game1.Controls.Add(InputBox1);
             Game1.Location = new System.Drawing.Point(4, 5);
-            Game1.Margin = new System.Windows.Forms.Padding(4);
             Game1.Name = "Game1";
-            Game1.Padding = new System.Windows.Forms.Padding(4);
-            Game1.Size = new System.Drawing.Size(1020, 628);
+            Game1.Padding = new System.Windows.Forms.Padding(3);
+            Game1.Size = new System.Drawing.Size(814, 501);
             Game1.TabIndex = 1;
             Game1.Text = "game console";
             // 
             // InputBox1
             // 
-            InputBox1.Location = new System.Drawing.Point(34, 461);
-            InputBox1.Margin = new System.Windows.Forms.Padding(4);
+            InputBox1.Location = new System.Drawing.Point(27, 369);
             InputBox1.Name = "InputBox1";
-            InputBox1.Size = new System.Drawing.Size(965, 31);
+            InputBox1.Size = new System.Drawing.Size(773, 27);
             InputBox1.TabIndex = 0;
             InputBox1.KeyPress += InputBox1_KeyPress;
             // 
@@ -151,33 +148,31 @@
             Map1.BackColor = System.Drawing.Color.Black;
             Map1.Controls.Add(flowLayoutPanel1);
             Map1.Location = new System.Drawing.Point(4, 5);
-            Map1.Margin = new System.Windows.Forms.Padding(4);
             Map1.Name = "Map1";
-            Map1.Padding = new System.Windows.Forms.Padding(4);
-            Map1.Size = new System.Drawing.Size(1020, 628);
+            Map1.Padding = new System.Windows.Forms.Padding(3);
+            Map1.Size = new System.Drawing.Size(814, 501);
             Map1.TabIndex = 2;
             Map1.Text = "map";
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
-            flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            flowLayoutPanel1.Location = new System.Drawing.Point(207, 14);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            flowLayoutPanel1.MinimumSize = new System.Drawing.Size(30, 30);
+            flowLayoutPanel1.MinimumSize = new System.Drawing.Size(24, 24);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new System.Drawing.Size(1012, 620);
+            flowLayoutPanel1.Size = new System.Drawing.Size(366, 427);
             flowLayoutPanel1.TabIndex = 6;
             // 
             // GameForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Black;
-            ClientSize = new System.Drawing.Size(1028, 637);
+            ClientSize = new System.Drawing.Size(822, 510);
             Controls.Add(tabControl1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             Name = "GameForm";
             Text = "StartWindow";
             Load += Form1_Load;
