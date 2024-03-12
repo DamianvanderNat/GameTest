@@ -38,10 +38,18 @@
             InputBox1 = new System.Windows.Forms.TextBox();
             Map1 = new System.Windows.Forms.TabPage();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            textBox1 = new System.Windows.Forms.TextBox();
+            mapQuestLogBox = new System.Windows.Forms.RichTextBox();
+            legendaHolder1 = new System.Windows.Forms.PictureBox();
+            legendaPictureBox1 = new System.Windows.Forms.PictureBox();
+            legendaPictureBox2 = new System.Windows.Forms.PictureBox();
             tabControl1.SuspendLayout();
             MenuTab1.SuspendLayout();
             Game1.SuspendLayout();
             Map1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)legendaHolder1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)legendaPictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)legendaPictureBox2).BeginInit();
             SuspendLayout();
             // 
             // lblStart
@@ -146,6 +154,11 @@
             // Map1
             // 
             Map1.BackColor = System.Drawing.Color.Black;
+            Map1.Controls.Add(legendaPictureBox2);
+            Map1.Controls.Add(legendaPictureBox1);
+            Map1.Controls.Add(legendaHolder1);
+            Map1.Controls.Add(mapQuestLogBox);
+            Map1.Controls.Add(textBox1);
             Map1.Controls.Add(flowLayoutPanel1);
             Map1.Location = new System.Drawing.Point(4, 5);
             Map1.Name = "Map1";
@@ -157,12 +170,54 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
-            flowLayoutPanel1.Location = new System.Drawing.Point(207, 14);
+            flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             flowLayoutPanel1.MinimumSize = new System.Drawing.Size(24, 24);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new System.Drawing.Size(366, 427);
             flowLayoutPanel1.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(20, 448);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(773, 27);
+            textBox1.TabIndex = 7;
+            // 
+            // mapQuestLogBox
+            // 
+            mapQuestLogBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            mapQuestLogBox.Location = new System.Drawing.Point(372, 243);
+            mapQuestLogBox.Name = "mapQuestLogBox";
+            mapQuestLogBox.Size = new System.Drawing.Size(436, 187);
+            mapQuestLogBox.TabIndex = 8;
+            mapQuestLogBox.Text = "";
+            // 
+            // legendaHolder1
+            // 
+            legendaHolder1.BackColor = System.Drawing.Color.RosyBrown;
+            legendaHolder1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            legendaHolder1.Location = new System.Drawing.Point(372, 3);
+            legendaHolder1.Name = "legendaHolder1";
+            legendaHolder1.Size = new System.Drawing.Size(439, 191);
+            legendaHolder1.TabIndex = 9;
+            legendaHolder1.TabStop = false;
+            // 
+            // legendaPictureBox1
+            // 
+            legendaPictureBox1.Location = new System.Drawing.Point(384, 7);
+            legendaPictureBox1.Name = "legendaPictureBox1";
+            legendaPictureBox1.Size = new System.Drawing.Size(26, 170);
+            legendaPictureBox1.TabIndex = 0;
+            legendaPictureBox1.TabStop = false;
+            // 
+            // legendaPictureBox2
+            // 
+            legendaPictureBox2.Location = new System.Drawing.Point(582, 7);
+            legendaPictureBox2.Name = "legendaPictureBox2";
+            legendaPictureBox2.Size = new System.Drawing.Size(26, 170);
+            legendaPictureBox2.TabIndex = 0;
+            legendaPictureBox2.TabStop = false;
             // 
             // GameForm
             // 
@@ -183,6 +238,10 @@
             Game1.ResumeLayout(false);
             Game1.PerformLayout();
             Map1.ResumeLayout(false);
+            Map1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)legendaHolder1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)legendaPictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)legendaPictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -198,6 +257,11 @@
         private System.Windows.Forms.TextBox InputBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox legendaHolder1;
+        private System.Windows.Forms.RichTextBox mapQuestLogBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox legendaPictureBox2;
+        private System.Windows.Forms.PictureBox legendaPictureBox1;
     }
 }
 
