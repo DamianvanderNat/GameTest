@@ -122,6 +122,10 @@ namespace GameTest
                         InputBoxMap1.Text = "";
                         break;
                     case "attack":
+                        if (tabControl1.SelectedTab == Game1)
+                        {
+
+                        }
                         InputBox1.Text = "";
                         break;
                     case "run":
