@@ -84,24 +84,11 @@ namespace GameTest
             y.GenerateImageFromMap(flowLayoutPanel1);
             tabControl1.SelectedTab = Game1;
         }
-        private void StartPanel_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void GameForm_KeyDown(object sender, KeyEventArgs e)
         {
 
-        }
-
-
-        public void InputBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (InputBox1.Text == "quit" || InputBox1.Text == "Quit")
-            {
-
-            }
-           
         }
         public void InputBoxMap1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -133,6 +120,12 @@ namespace GameTest
                         tabControl1.SelectedTab = Game1;
                         InputBox1.Text = "";
                         InputBoxMap1.Text = "";
+                        break;
+                    case "attack":
+                        InputBox1.Text = "";
+                        break;
+                    case "run":
+                        InputBox1.Text = "";
                         break;
                 }
             }
