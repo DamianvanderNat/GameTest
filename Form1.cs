@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,23 +15,39 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GameTest
 {
+
     public partial class GameForm : Form
     {
+
+        public Player player;
+        public Enemy Enemy1;
+        public Enemy Enemy2;
+
         public GameForm()
         {
             InitializeComponent();
 
-
         }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //this.TopMost = true;
-            //this.FormBorderStyle = FormBorderStyle.None;
-            //this.WindowState = FormWindowState.Maximized;
+                List<Enemy> Enemies = new List<Enemy>();
+
         }
 
-        private void lblQuit_Click(object sender, EventArgs e)
+
+    /* this.Enemy1 = new Enemy("Slime", 100, 10, 0);
+     this.Enemy2 = new Enemy("goblin", 100, 10, 0);*/
+
+
+    //this.TopMost = true;
+    //this.FormBorderStyle = FormBorderStyle.None;
+    //this.WindowState = FormWindowState.Maximized;
+
+
+    private void lblQuit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -56,6 +73,8 @@ namespace GameTest
         }
         private void lblStart_Click(object sender, EventArgs e)
         {
+            this.player = new Player();
+
             string json = ReadJsonMapFromFile("mapvb.json");
             MapGeneration y = JsonConvert.
                 DeserializeObject<MapGeneration>(json);
@@ -90,6 +109,20 @@ namespace GameTest
                 if (e.KeyChar == (char)Keys.Enter)
                 {
                     tabControl1.SelectedTab = Map1;
+                }
+            }
+            if (InputBox1.Text == "Attack")
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    TextLog.Text += "Enemy takes " + this.player.damage + " damage!" + "\n";
+                }
+            }
+            if (InputBox1.Text == "Run")
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    TextLog.Text += "You ran away from " + this.Enemy1.name + "\n";
                 }
             }
         }
