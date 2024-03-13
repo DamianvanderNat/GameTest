@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -19,8 +20,6 @@ namespace GameTest
         public GameForm()
         {
             InitializeComponent();
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,22 +75,48 @@ namespace GameTest
         }
 
 
-        private void InputBox1_KeyPress(object sender, KeyPressEventArgs e)
+        public void InputBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (InputBox1.Text == "quit" || InputBox1.Text == "Quit")
             {
-                if (e.KeyChar == (char)Keys.Enter)
-                {
-                    Application.Exit();
-                }
+
             }
-            if (InputBox1.Text == "map" || InputBox1.Text == "Map")
+           
+        }
+        public void InputBoxMap1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string action = "";
+            if (sender == InputBoxMap1)
             {
-                if (e.KeyChar == (char)Keys.Enter)
+                action = InputBoxMap1.Text.ToLower();
+            }
+            else
+            {
+                action = InputBox1.Text.ToLower();
+            }
+            
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                switch (action)
                 {
-                    tabControl1.SelectedTab = Map1;
+                    case "map":
+                        tabControl1.SelectedTab = Map1;
+                        InputBox1.Text = "";
+                        InputBoxMap1.Text = "";
+                        break;
+                    case "quit":
+                        Application.Exit();
+                        InputBox1.Text = "";
+                        InputBoxMap1.Text = "";
+                        break;
+                    case "return":
+                        tabControl1.SelectedTab = Game1;
+                        InputBox1.Text = "";
+                        InputBoxMap1.Text = "";
+                        break;
                 }
             }
+
         }
     }
 }
