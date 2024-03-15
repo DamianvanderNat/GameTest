@@ -42,6 +42,7 @@
             legendaPictureBox1 = new System.Windows.Forms.PictureBox();
             legendaHolder1 = new System.Windows.Forms.PictureBox();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            playerLocation = new System.Windows.Forms.Label();
             tabControl1.SuspendLayout();
             MenuTab1.SuspendLayout();
             Game1.SuspendLayout();
@@ -98,7 +99,7 @@
             tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             tabControl1.ItemSize = new System.Drawing.Size(0, 1);
             tabControl1.Location = new System.Drawing.Point(0, 0);
-            tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            tabControl1.Margin = new System.Windows.Forms.Padding(2);
             tabControl1.Multiline = true;
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -114,29 +115,30 @@
             MenuTab1.Controls.Add(lblStart);
             MenuTab1.Controls.Add(lblSettings);
             MenuTab1.Location = new System.Drawing.Point(4, 5);
-            MenuTab1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            MenuTab1.Margin = new System.Windows.Forms.Padding(2);
             MenuTab1.Name = "MenuTab1";
-            MenuTab1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            MenuTab1.Size = new System.Drawing.Size(734, 448);
+            MenuTab1.Padding = new System.Windows.Forms.Padding(2);
+            MenuTab1.Size = new System.Drawing.Size(734, 461);
             MenuTab1.TabIndex = 0;
             MenuTab1.Text = "start menu";
             // 
             // Game1
             // 
             Game1.BackColor = System.Drawing.Color.Black;
+            Game1.Controls.Add(playerLocation);
             Game1.Controls.Add(InputBox1);
             Game1.Location = new System.Drawing.Point(4, 5);
-            Game1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Game1.Margin = new System.Windows.Forms.Padding(2);
             Game1.Name = "Game1";
-            Game1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            Game1.Size = new System.Drawing.Size(738, 455);
+            Game1.Padding = new System.Windows.Forms.Padding(2);
+            Game1.Size = new System.Drawing.Size(734, 461);
             Game1.TabIndex = 1;
             Game1.Text = "game console";
             // 
             // InputBox1
             // 
-            InputBox1.Location = new System.Drawing.Point(61, 430);
-            InputBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            InputBox1.Location = new System.Drawing.Point(61, 416);
+            InputBox1.Margin = new System.Windows.Forms.Padding(2);
             InputBox1.Name = "InputBox1";
             InputBox1.Size = new System.Drawing.Size(619, 27);
             InputBox1.TabIndex = 7;
@@ -152,16 +154,16 @@
             Map1.Controls.Add(legendaHolder1);
             Map1.Controls.Add(flowLayoutPanel1);
             Map1.Location = new System.Drawing.Point(4, 5);
-            Map1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Map1.Margin = new System.Windows.Forms.Padding(2);
             Map1.Name = "Map1";
-            Map1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            Map1.Padding = new System.Windows.Forms.Padding(2);
             Map1.Size = new System.Drawing.Size(734, 461);
             Map1.TabIndex = 2;
             Map1.Text = "map";
             // 
             // InputBoxMap1
             // 
-            InputBoxMap1.Location = new System.Drawing.Point(134, 432);
+            InputBoxMap1.Location = new System.Drawing.Point(139, 430);
             InputBoxMap1.Margin = new System.Windows.Forms.Padding(2);
             InputBoxMap1.Name = "InputBoxMap1";
             InputBoxMap1.Size = new System.Drawing.Size(496, 27);
@@ -218,6 +220,16 @@
             flowLayoutPanel1.Size = new System.Drawing.Size(366, 427);
             flowLayoutPanel1.TabIndex = 6;
             // 
+            // playerLocation
+            // 
+            playerLocation.AutoSize = true;
+            playerLocation.BackColor = System.Drawing.Color.Chartreuse;
+            playerLocation.Location = new System.Drawing.Point(264, 140);
+            playerLocation.Name = "playerLocation";
+            playerLocation.Size = new System.Drawing.Size(50, 20);
+            playerLocation.TabIndex = 8;
+            playerLocation.Text = "label1";
+            // 
             // GameForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -261,6 +273,7 @@
         private System.Windows.Forms.PictureBox legendaPictureBox2;
         private System.Windows.Forms.PictureBox legendaPictureBox1;
         private System.Windows.Forms.RichTextBox TextLog;
+        private System.Windows.Forms.Label playerLocation;
     }
 }
 

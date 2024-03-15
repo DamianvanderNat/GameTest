@@ -33,21 +33,22 @@ namespace GameTest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-                List<Enemy> Enemies = new List<Enemy>();
+            //var obj = new ClassName();
+            List<Enemy> Enemies = new List<Enemy>();
 
         }
 
 
-    /* this.Enemy1 = new Enemy("Slime", 100, 10, 0);
-     this.Enemy2 = new Enemy("goblin", 100, 10, 0);*/
+        /* this.Enemy1 = new Enemy("Slime", 100, 10, 0);
+         this.Enemy2 = new Enemy("goblin", 100, 10, 0);*/
 
 
-    //this.TopMost = true;
-    //this.FormBorderStyle = FormBorderStyle.None;
-    //this.WindowState = FormWindowState.Maximized;
+        //this.TopMost = true;
+        //this.FormBorderStyle = FormBorderStyle.None;
+        //this.WindowState = FormWindowState.Maximized;
 
 
-    private void lblQuit_Click(object sender, EventArgs e)
+        private void lblQuit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -101,7 +102,7 @@ namespace GameTest
             {
                 action = InputBox1.Text.ToLower();
             }
-            
+
             if (e.KeyChar == (char)Keys.Enter)
             {
                 switch (action)
@@ -121,19 +122,43 @@ namespace GameTest
                         InputBox1.Text = "";
                         InputBoxMap1.Text = "";
                         break;
+                    case "north":
+                        player.Location.Y = player.Location.Y++;
+                        playerLocation.Text = player.Location.ToString();
+                        InputBox1.Text = "";
+                        break;
+                    case "east":
+                        player.Location.X = player.Location.X++;
+                        playerLocation.Text = player.Location.ToString();
+                        InputBox1.Text = "";
+
+                        break;
+                    case "south":
+                        player.Location.Y = player.Location.Y--;
+                        playerLocation.Text = player.Location.ToString();
+                        InputBox1.Text = "";
+                        break;
+                    case "west":
+                        player.Location.X = player.Location.X--;
+                        playerLocation.Text = player.Location.ToString();
+                        InputBox1.Text = "";
+                        break;
                     case "attack":
                         if (tabControl1.SelectedTab == Game1)
                         {
-
+                            InputBox1.Text = "";
+                            break;
                         }
-                        InputBox1.Text = "";
                         break;
                     case "run":
-                        InputBox1.Text = "";
+                        if (tabControl1.SelectedTab == Game1)
+                        {
+                            InputBox1.Text = "";
+                            break;
+                        }
                         break;
                 }
             }
-
         }
     }
 }
